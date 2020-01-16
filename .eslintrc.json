@@ -1,0 +1,45 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": ["prettier", "airbnb-base"],
+    "plugins": ["prettier", "import-helpers"],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "quotes": "off",
+        "camelcase": "off",
+        "indent": ["error", 4],
+        "no-param-reassign": "off",
+        "prettier/prettier": "error",
+        "max-len": [1, { "code": 120 }],
+        "class-methods-use-this": "off",
+        "comma-dangle": ["error", "never"],
+        "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+        "arrow-parens": [2, "as-needed", { "requireForBlockBody": true }],
+        "object-curly-newline": [
+            "error",
+            {
+                "ObjectExpression": "always",
+                "ObjectPattern": { "multiline": true },
+                "ImportDeclaration": "never",
+                "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+            }
+        ],
+        "import-helpers/order-imports": [
+            "warn",
+            {
+                "newlinesBetween": "always", // new line between groups
+                "groups": ["module", ["parent", "sibling", "index"]],
+                "alphabetize": { "order": "asc", "ignoreCase": true }
+            }
+        ]
+    }
+}
