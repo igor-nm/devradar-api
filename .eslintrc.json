@@ -3,8 +3,8 @@
         "es6": true,
         "node": true
     },
-    "extends": ["prettier", "airbnb-base"],
-    "plugins": ["prettier", "import-helpers"],
+    "extends": ["prettier", "airbnb-base", "plugin:jest/recommended"],
+    "plugins": ["prettier", "import-helpers", "jest"],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
